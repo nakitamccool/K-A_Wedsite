@@ -1,0 +1,376 @@
+/* Specific media queries for background image for landing page */
+
+/* Default if screen size outside of media query */
+header {
+    background-image: url("../img/aknz.png");
+    color: white;
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    /* positions image horizontally and vertically */
+    background-size: cover;
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    header {
+        background-image: url("../img/aknz.png");
+        background-repeat: no-repeat;
+        background-position: 75% 75%;
+        background-size: cover;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) and  (max-width: 959px) {
+    header {
+        background-image: url("../img/aknz.png");
+        background-repeat: no-repeat;
+        background-position: 75% 75%;
+        background-size: cover;
+    }
+
+}
+
+/* Medium to Large Devices, Desktops */
+@media only screen and (min-width: 960px) and  (max-width: 1199px) {
+    header {
+        background-image: url("../img/aknz.png");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+    }
+
+}
+
+/* Specific media queries for background image for landing page */
+
+.navbar-default .navbar-header .navbar-brand:hover,
+.navbar-default .navbar-header .navbar-brand:focus {
+    color: #E39B9C;
+}
+
+/*General media queries*/
+
+/*SM devices*/
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    .navbar-default .navbar-header .navbar-brand {
+        color: #F4C4C0;
+    }
+
+    .navbar-default .navbar-header .navbar-brand:hover,
+    .navbar-default .navbar-header .navbar-brand:focus {
+        color: #E39B9C;
+    }
+
+    .navbar-default .navbar-header .navbar-toggle {
+        font-size: 12px;
+        color: #E39B9C;
+        padding: 8px 10px;
+    }
+
+    .navbar-default .nav > li > a,
+    .navbar-default .nav > li > a:focus {
+        color: #F4C4C0;
+    }
+
+    .navbar-default .nav > li > a:hover,
+    .navbar-default .nav > li > a:focus:hover {
+        color: #E39B9C;
+    }
+
+}
+
+/*M-L devices*/
+@media only screen and (min-width: 768px) {
+    .navbar-default .navbar-header .navbar-brand {
+        color: #b1b3b0;
+    }
+
+    .navbar-default .navbar-header .navbar-brand:hover,
+    .navbar-default .navbar-header .navbar-brand:focus {
+        color: #E39B9C;
+    }
+
+    .navbar-default .nav > li > a,
+    .navbar-default .nav > li > a:focus {
+        color: #b1b3b0;
+    }
+
+    .navbar-default .nav > li > a:hover,
+    .navbar-default .nav > li > a:focus:hover {
+        color: #E39B9C;
+    }
+}
+
+.btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
+    color: white;
+    background-color: #E39B9C;
+    border-color: #E39B9C;
+}
+
+.calltoaction {
+    margin: 3px;
+}
+
+.header-content-inner {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.title {
+    color: white;
+}
+
+.subtitle {
+    font-style: italic;
+}
+
+.bg-primary {
+    background: #F4C4C0;
+}
+
+.rsvpnote {
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #E39B9C;
+    background-color: white;
+    color: #b1b3b0;
+    text-align: left;
+}
+
+#canmakeit, #cannotmakeit, #rsvpmessage {
+    margin: 20px;
+}
+
+#rsvpmessage {
+    font-style: italic;
+    border: 1px silver solid;
+    padding: 5px 2px 2px 5px;
+}
+
+input[type=submit] {
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+/*RSVP section styling*/
+section.rsvp {
+    padding: 150px 0;
+    position: relative;
+}
+
+section.rsvp h2 {
+    margin-top: 0;
+    font-size: 50px;
+}
+
+section.rsvp .badges .badge-link {
+    display: block;
+    margin-bottom: 25px;
+}
+
+section.rsvp .badges .badge-link:last-child {
+    margin-bottom: 0;
+}
+
+section.rsvp .badges .badge-link img {
+    height: 60px;
+}
+
+@media (min-width: 768px) {
+    section.rsvp .badges .badge-link {
+        display: inline-block;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    section.rsvp h2 {
+        font-size: 70px;
+    }
+}
+
+/* END OF RSVP section styling */
+
+/* The Big Day section styling */
+section.thebigday .section-heading {
+    margin-bottom: 100px;
+}
+
+section.thebigday .section-heading h2 {
+    margin-top: 0;
+}
+
+section.thebigday .section-heading p {
+    margin-bottom: 0;
+}
+
+section.thebigday .device-container,
+section.thebigday .feature-item {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+section.thebigday .device-container {
+    margin-bottom: 100px;
+}
+
+@media (min-width: 992px) {
+    section.thebigday .device-container {
+        margin-bottom: 0;
+    }
+}
+
+section.thebigday .feature-item {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+section.thebigday .feature-item h3 {
+    font-size: 30px;
+}
+
+section.thebigday .feature-item i {
+    font-size: 80px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 992px) {
+    section.thebigday .device-container,
+    section.thebigday .feature-item {
+        max-width: none;
+    }
+}
+
+/* END OF The Big Day section styling */
+
+/* Getting there styling */
+#map {
+    height: 600px;
+    width: 100%;
+    background-color: grey;
+}
+/* END OF Getting there styling */
+
+/* Staying there styling */
+.view {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    float: left;
+    border: 10px solid #fff;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    cursor: default;
+    background: #fff url(../img/bgimg.jpg) no-repeat center center
+}
+.view .mask, .view .content {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+.view img {
+    display: block;
+    position: relative
+}
+.view h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px 0 0 0
+}
+.view p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 20px;
+    text-align: center
+}
+.view a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000
+}
+.view a.info:hover {
+    box-shadow: 0 0 5px #000
+}
+
+.view-second img {
+	transition: all 0.2s ease-in;
+}
+.view-second .mask {
+	background-color: rgba(115,146,184, 0.7);
+	width: 300px;
+    padding: 60px;
+	height: 300px;
+	opacity: 0;
+	transform: translate(265px, 145px) rotate(45deg);
+	transition: all 0.2s ease-in-out;
+}
+.view-second h2 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background: transparent;
+    margin: 20px 40px 0px 40px;
+    transform: translate(200px, -200px);
+	transition: all 0.2s ease-in-out;
+}
+.view-second p {
+	transform: translate(-200px, 200px);
+	transition: all 0.2s ease-in-out;
+}
+.view-second a.info {
+    transform: translate(0px, 100px);
+	transition: all 0.2s 0.1s ease-in-out;
+}
+.view-second:hover .mask {
+	opacity:1;
+	transform: translate(-80px, -125px) rotate(45deg);
+}
+.view-second:hover h2 {
+	transform: translate(0px,0px);
+	transition-delay: 0.3s;
+}
+.view-second:hover p {
+    transform: translate(0px,0px);
+	transition-delay: 0.4s;
+}
+.view-second:hover a.info {
+	transform: translate(0px,0px);
+	transition-delay: 0.5s;
+}
+/* Staying there styling */
+
+/*Footer*/
+footer {
+    background-color: #eeeeee;
+    padding: 10px 0;
+    color: #b1b3b0;
+    text-align: center;
+    font-style: italic;
+}
+
+.nmccontact {
+    color: #b1b3b0;
+}
+
+/*End of footer*/
