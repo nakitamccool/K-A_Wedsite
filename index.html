@@ -58,19 +58,19 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="page-scroll" href="#rsvp">RSVP</a>
+                    <a id="thebigdaymenuitem" class="page-scroll" href="#thebigday">The Big Day</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#thebigday">The Big Day</a>
+                    <a id="gettingtheremenuitem" class="page-scroll" href="#gettingthere">Getting there</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#gettingthere">Getting there</a>
+                    <a id="stayingtheremenuitem" class="page-scroll" href="#stayingthere">Staying there</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#stayingthere">Staying there</a>
+                    <a id="rsvpmenuitem" class="page-scroll" href="#rsvp">RSVP</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#getintouch">Get in touch</a>
+                    <a id="getintouchmenuitem" class="page-scroll" href="#getintouch">Get in touch</a>
                 </li>
             </ul>
         </div>
@@ -98,34 +98,10 @@
     <!-- End of Invite -->
 </header>
 
-<!-- RSVP -->
-<section id="rsvp" class="download bg-primary text-center">
-    <div class="container">
-        <div class="row">
-            <form>
-                <div class="rsvpnote">
-                    <h3>Kiel and Anna, </h3>
-                    <h3>
-                        <input type="radio" name="rsvpresponse" value="Yes" checked id="canmakeit"> I’d be delighted
-                        to attend your wedding!<br>
-                        <input type="radio" name="rsvpresponse" value="No" id="cannotmakeit"> Sorry, I can't make
-                        it.<br>
-                        <textarea name="message" id="rsvpmessage" style="width:90%">Got a message for us? Feel free to jot it down here!</textarea>
-                    </h3>
-                    <h3>All the best, <br> Mark</h3>
-                </div>
-                <button class="btn btn-outline btn-xl calltoaction submit"><input type="submit" value="Send"></button>
-            </form>
-            <div class="badges">
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End of RSVP -->
-
 <!-- The Big Day -->
 <section id="thebigday" class="features">
     <div class="row">
+        <div class="sectiontitle"><h3 class="sectiontitletext">The Big Day</h3></div>
         <section id="photostack-1" class="photostack">
             <div>
                 <figure>
@@ -226,12 +202,14 @@
 
 <!-- Getting there -->
 <section id="gettingthere">
+    <div class="sectiontitle"><h3>Getting there</h3></div>
     <div id="map"></div>
 </section>
 <!-- End of Getting there -->
 
 <!-- Staying there -->
 <section id="stayingthere">
+    <div class="sectiontitle"><h3>Staying there</h3></div>
     <div class="row">
         <div class="view view-second">
             <img src="img/AKboquet.jpg"/>
@@ -270,22 +248,48 @@
 </section>
 <!-- End of Staying there -->
 
-<!-- Get in touch -->
-<section id="getintouch " class="contact bg-primary">
+<!-- RSVP -->
+<div class="sectiontitle"><h3>RSVP</h3></div>
+<section id="rsvp" class="download bg-primary text-center">
     <div class="container">
-        <h2>Get in touch!</h2>
+        <div class="row">
+            <form>
+                <div class="rsvpnote">
+                    <h3>Kiel and Anna, </h3>
+                    <h3>
+                        <input type="radio" name="rsvpresponse" value="Yes" checked id="canmakeit"> I’d be delighted
+                        to attend your wedding!<br>
+                        <input type="radio" name="rsvpresponse" value="No" id="cannotmakeit"> Sorry, I can't make
+                        it.<br>
+                        <textarea name="message" id="rsvpmessage" style="width:90%">Got a message for us? Feel free to jot it down here!</textarea>
+                    </h3>
+                    <h3>All the best, <br> Mark</h3>
+                </div>
+                <button class="btn btn-outline btn-xl calltoaction submit"><input id="sendbutton" type="submit" value="Send"></button>
+            </form>
+            <div class="badges">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of RSVP -->
+
+<!-- Get in touch -->
+<section id="getintouch " class="contact">
+    <div class="container">
+        <h2>Get in touch:</h2>
         <ul class="list-inline list-social">
-            <li class="social-twitter">
+            <li class="social-email">
                 <a href="email"><i class="fa fa-envelope"></i></a>
             </li>
-            <li class="phone">
+            <li class="social-phone">
                 <a href="#"><i class="fa fa-phone"></i></a>
             </li>
             <li class="social-facebook">
                 <a href="#"><i class="fa fa-facebook"></i></a>
             </li>
-            <li class="twitter">
-                <a href="#"><i class="fa fa-twitter"></i></a>
+            <li class="social-google-plus">
+                <a href="#"><i class="fa fa-google-plus"></i></a>
             </li>
         </ul>
     </div>

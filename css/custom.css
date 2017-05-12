@@ -102,6 +102,12 @@ header {
     }
 }
 
+div.sectiontitle {
+    background-color: white;
+    text-align: center;
+    width: 100%;
+}
+
 .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
     color: white;
     background-color: #E39B9C;
@@ -127,7 +133,12 @@ header {
 }
 
 .bg-primary {
-    background: #F4C4C0;
+    background-image: url("../img/lacebkg.jpg");
+    color: white;
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    /* positions image horizontally and vertically */
+    background-size: cover;
 }
 
 .rsvpnote {
@@ -194,9 +205,26 @@ section.rsvp .badges .badge-link img {
     }
 }
 
+button.btn.btn-outline.btn-xl.calltoaction.submit {
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #E39B9C;
+    background-color: white;
+    text-align: center;
+}
+
+#sendbutton {
+    color: #b1b3b0;
+}
+
 /* END OF RSVP section styling */
 
 /* The Big Day section styling */
+
+.photostack {
+    background-color: #F4C4C0;
+}
+
 section.thebigday .section-heading {
     margin-bottom: 100px;
 }
@@ -240,24 +268,27 @@ section.thebigday .feature-item i {
     -webkit-text-fill-color: transparent;
 }
 
-@media (min-width: 992px) {
-    section.thebigday .device-container,
-    section.thebigday .feature-item {
-        max-width: none;
-    }
-}
-
 /* END OF The Big Day section styling */
 
 /* Getting there styling */
 #map {
-    height: 600px;
+    height: 620px;
     width: 100%;
     background-color: grey;
 }
+
 /* END OF Getting there styling */
 
 /* Staying there styling */
+section#rsvp {
+    height: 600px;
+}
+
+section.download {
+    padding: 50px 0;
+    position: relative;
+}
+
 .view {
     width: 300px;
     height: 200px;
@@ -271,6 +302,7 @@ section.thebigday .feature-item i {
     cursor: default;
     background: #fff url(../img/bgimg.jpg) no-repeat center center
 }
+
 .view .mask, .view .content {
     width: 300px;
     height: 200px;
@@ -279,10 +311,12 @@ section.thebigday .feature-item i {
     top: 0;
     left: 0
 }
+
 .view img {
     display: block;
     position: relative
 }
+
 .view h2 {
     text-transform: uppercase;
     color: #fff;
@@ -293,6 +327,7 @@ section.thebigday .feature-item i {
     background: rgba(0, 0, 0, 0.8);
     margin: 20px 0 0 0
 }
+
 .view p {
     font-family: Georgia, serif;
     font-style: italic;
@@ -302,6 +337,7 @@ section.thebigday .feature-item i {
     padding: 10px 20px 20px;
     text-align: center
 }
+
 .view a.info {
     display: inline-block;
     text-decoration: none;
@@ -311,58 +347,91 @@ section.thebigday .feature-item i {
     text-transform: uppercase;
     box-shadow: 0 0 1px #000
 }
+
 .view a.info:hover {
     box-shadow: 0 0 5px #000
 }
 
 .view-second img {
-	transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
 }
+
 .view-second .mask {
-	background-color: rgba(115,146,184, 0.7);
-	width: 300px;
+    background-color: rgba(115, 146, 184, 0.7);
+    width: 300px;
     padding: 60px;
-	height: 300px;
-	opacity: 0;
-	transform: translate(265px, 145px) rotate(45deg);
-	transition: all 0.2s ease-in-out;
+    height: 300px;
+    opacity: 0;
+    transform: translate(265px, 145px) rotate(45deg);
+    transition: all 0.2s ease-in-out;
 }
+
 .view-second h2 {
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     background: transparent;
     margin: 20px 40px 0px 40px;
     transform: translate(200px, -200px);
-	transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
+
 .view-second p {
-	transform: translate(-200px, 200px);
-	transition: all 0.2s ease-in-out;
+    transform: translate(-200px, 200px);
+    transition: all 0.2s ease-in-out;
 }
+
 .view-second a.info {
     transform: translate(0px, 100px);
-	transition: all 0.2s 0.1s ease-in-out;
+    transition: all 0.2s 0.1s ease-in-out;
 }
-.view-second:hover .mask {
-	opacity:1;
-	transform: translate(-80px, -125px) rotate(45deg);
-}
-.view-second:hover h2 {
-	transform: translate(0px,0px);
-	transition-delay: 0.3s;
-}
-.view-second:hover p {
-    transform: translate(0px,0px);
-	transition-delay: 0.4s;
-}
-.view-second:hover a.info {
-	transform: translate(0px,0px);
-	transition-delay: 0.5s;
-}
-/* Staying there styling */
 
+.view-second:hover .mask {
+    opacity: 1;
+    transform: translate(-80px, -125px) rotate(45deg);
+}
+
+.view-second:hover h2 {
+    transform: translate(0px, 0px);
+    transition-delay: 0.3s;
+}
+
+.view-second:hover p {
+    transform: translate(0px, 0px);
+    transition-delay: 0.4s;
+}
+
+.view-second:hover a.info {
+    transform: translate(0px, 0px);
+    transition-delay: 0.5s;
+}
+
+/* Staying there styling */
+/* Get in touch styling */
+section.contact {
+    background-color: #F4C4C0;
+    padding: 20px 0px;
+    color: white;
+}
+
+section.contact ul.list-social li.social-email a,
+section.contact ul.list-social li.social-facebook a,
+section.contact ul.list-social li.social-phone a,
+section.contact ul.list-social li.social-google-plus a {
+    background-color: white;
+    color: #E39B9C;
+}
+
+section.contact ul.list-social li.social-email a:hover,
+section.contact ul.list-social li.social-facebook a:hover,
+section.contact ul.list-social li.social-phone a:hover,
+section.contact ul.list-social li.social-google-plus a:hover {
+    background-color: #E39B9C;
+    color: white;
+}
+
+/* END OF Get in touch styling */
 /*Footer*/
 footer {
-    background-color: #eeeeee;
+    background-color: white;
     padding: 10px 0;
     color: #b1b3b0;
     text-align: center;
@@ -374,3 +443,6 @@ footer {
 }
 
 /*End of footer*/
+section {
+    padding: 0px;
+}
