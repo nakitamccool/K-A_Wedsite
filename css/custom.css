@@ -1,8 +1,9 @@
 /* Specific media queries for background image for landing page */
 
 /* Default if screen size outside of media query */
+/*using larger png file for better quality black and white photo*/
 header {
-    background-image: url("../img/aknz.png");
+    background-image: url("../img/backgroundphotos/ka_1800.png");
     color: white;
     background-repeat: no-repeat;
     background-position: 0% 0%;
@@ -13,7 +14,7 @@ header {
 /* Extra Small Devices, Phones */
 @media only screen and (min-width: 0px) and (max-width: 767px) {
     header {
-        background-image: url("../img/aknz.png");
+        background-image: url("../img/backgroundphotos/ka_960.png");
         background-repeat: no-repeat;
         background-position: 75% 75%;
         background-size: cover;
@@ -23,7 +24,7 @@ header {
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) and  (max-width: 959px) {
     header {
-        background-image: url("../img/aknz.png");
+        background-image: url("../img/backgroundphotos/ka_960.png");
         background-repeat: no-repeat;
         background-position: 75% 75%;
         background-size: cover;
@@ -34,7 +35,7 @@ header {
 /* Medium to Large Devices, Desktops */
 @media only screen and (min-width: 960px) and  (max-width: 1199px) {
     header {
-        background-image: url("../img/aknz.png");
+        background-image: url("../img/backgroundphotos/ka_1800.png");
         background-repeat: no-repeat;
         background-position: 50% 50%;
         background-size: cover;
@@ -54,7 +55,7 @@ header {
 /*SM devices*/
 @media only screen and (min-width: 0px) and (max-width: 767px) {
     .navbar-default .navbar-header .navbar-brand {
-        color: #F4C4C0;
+        color: #E39B9C;
     }
 
     .navbar-default .navbar-header .navbar-brand:hover,
@@ -76,6 +77,10 @@ header {
     .navbar-default .nav > li > a:hover,
     .navbar-default .nav > li > a:focus:hover {
         color: #E39B9C;
+    }
+
+    img.img-circle{
+        display: none;
     }
 
 }
@@ -102,6 +107,8 @@ header {
     }
 }
 
+/*General*/
+
 div.sectiontitle {
     background-color: white;
     text-align: center;
@@ -110,7 +117,7 @@ div.sectiontitle {
 
 .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
     color: white;
-    background-color: #E39B9C;
+    background-color: #F4C4C0;
     border-color: #E39B9C;
 }
 
@@ -141,6 +148,13 @@ div.sectiontitle {
     background-size: cover;
 }
 
+.rsvpimg{
+    height: 100%;
+}
+.rsvpform{
+    height: 100%;
+
+}
 .rsvpnote {
     margin: 10px;
     padding: 20px;
@@ -148,35 +162,43 @@ div.sectiontitle {
     border-style: solid;
     border-color: #E39B9C;
     background-color: white;
-    color: #b1b3b0;
+    color: #555;
     text-align: left;
 }
 
-#canmakeit, #cannotmakeit, #rsvpmessage {
-    margin: 20px;
+fieldset.form-group {
+    margin-left: 14px;
 }
 
-#rsvpmessage {
-    font-style: italic;
-    border: 1px silver solid;
-    padding: 5px 2px 2px 5px;
-}
 
-input[type=submit] {
-    background-color: transparent;
-    border: none;
+button.sendrsvp.btn.btn-primary{
     color: white;
+    background-color: #F4C4C0;
+    border-color: #E39B9C;
+    margin-top: 20px;
+    float: right;
+}
+
+button.sendrsvp.btn.btn-primary:hover, button.sendrsvp.btn.btn-primary:focus, button.sendrsvp.btn.btn-primary:active {
+    color: white;
+    background-color: #E39B9C;
+    border-color: #E39B9C;
+}
+.img-circle{
+    border-radius: 50%;
+    border: 3px solid #E39B9C;
+    margin: 5px;
+}
+
+input#gridRadios1, input#gridRadios2{
+    margin-right: 5px;
 }
 
 /*RSVP section styling*/
 section.rsvp {
     padding: 150px 0;
     position: relative;
-}
-
-section.rsvp h2 {
-    margin-top: 0;
-    font-size: 50px;
+    margin: 10px;
 }
 
 section.rsvp .badges .badge-link {
@@ -216,6 +238,7 @@ button.btn.btn-outline.btn-xl.calltoaction.submit {
 #sendbutton {
     color: #b1b3b0;
 }
+
 
 /* END OF RSVP section styling */
 
@@ -274,134 +297,29 @@ section.thebigday .feature-item i {
 #map {
     height: 620px;
     width: 100%;
-    background-color: grey;
+    background-color: #b1b3b0;
+}
+
+span.mapdetail {
+    margin-left: 20px;
+    color: #E39B9C;
+    font-size: 12px;
+}
+
+i.mapicon.fa.fa-globe:before, i.mapicon.fa.fa-phone:before {
+    color: #b1b3b0;
 }
 
 /* END OF Getting there styling */
 
 /* Staying there styling */
 section#rsvp {
-    height: 600px;
+    height: 700px;
 }
 
 section.download {
     padding: 50px 0;
     position: relative;
-}
-
-.view {
-    width: 300px;
-    height: 200px;
-    margin: 10px;
-    float: left;
-    border: 10px solid #fff;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    box-shadow: 1px 1px 2px #e6e6e6;
-    cursor: default;
-    background: #fff url(../img/bgimg.jpg) no-repeat center center
-}
-
-.view .mask, .view .content {
-    width: 300px;
-    height: 200px;
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 0
-}
-
-.view img {
-    display: block;
-    position: relative
-}
-
-.view h2 {
-    text-transform: uppercase;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    font-size: 17px;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
-    margin: 20px 0 0 0
-}
-
-.view p {
-    font-family: Georgia, serif;
-    font-style: italic;
-    font-size: 12px;
-    position: relative;
-    color: #fff;
-    padding: 10px 20px 20px;
-    text-align: center
-}
-
-.view a.info {
-    display: inline-block;
-    text-decoration: none;
-    padding: 7px 14px;
-    background: #000;
-    color: #fff;
-    text-transform: uppercase;
-    box-shadow: 0 0 1px #000
-}
-
-.view a.info:hover {
-    box-shadow: 0 0 5px #000
-}
-
-.view-second img {
-    transition: all 0.2s ease-in;
-}
-
-.view-second .mask {
-    background-color: rgba(115, 146, 184, 0.7);
-    width: 300px;
-    padding: 60px;
-    height: 300px;
-    opacity: 0;
-    transform: translate(265px, 145px) rotate(45deg);
-    transition: all 0.2s ease-in-out;
-}
-
-.view-second h2 {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    background: transparent;
-    margin: 20px 40px 0px 40px;
-    transform: translate(200px, -200px);
-    transition: all 0.2s ease-in-out;
-}
-
-.view-second p {
-    transform: translate(-200px, 200px);
-    transition: all 0.2s ease-in-out;
-}
-
-.view-second a.info {
-    transform: translate(0px, 100px);
-    transition: all 0.2s 0.1s ease-in-out;
-}
-
-.view-second:hover .mask {
-    opacity: 1;
-    transform: translate(-80px, -125px) rotate(45deg);
-}
-
-.view-second:hover h2 {
-    transform: translate(0px, 0px);
-    transition-delay: 0.3s;
-}
-
-.view-second:hover p {
-    transform: translate(0px, 0px);
-    transition-delay: 0.4s;
-}
-
-.view-second:hover a.info {
-    transform: translate(0px, 0px);
-    transition-delay: 0.5s;
 }
 
 /* Staying there styling */
@@ -410,6 +328,13 @@ section.contact {
     background-color: #F4C4C0;
     padding: 20px 0px;
     color: white;
+}
+
+li.social-email,
+li.social-facebook,
+li.social-phone,
+li.social-google-plus {
+    margin: 3px;
 }
 
 section.contact ul.list-social li.social-email a,
@@ -446,3 +371,23 @@ footer {
 section {
     padding: 0px;
 }
+
+
+/*Staying there*/
+p.accomm_description, span.mapdetail {
+    margin-bottom: 1px;
+    -webkit-font-smoothing: antialiased;
+}
+
+h3>a{
+    color: #E39B9C;
+}
+
+h3>a:hover, h3>a.focus, h3>a.active{
+    color: #E39B9C;
+}
+
+.col-md-4.portfolio-item {
+    margin-bottom: 30px;
+}
+/*End of staying there*/

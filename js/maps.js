@@ -6,10 +6,10 @@ function initMap() {
     //Location coordinates
     var church = {lat: 51.910518, lng: -8.170365};
     var reception = {lat: 51.911443, lng: -8.063080};
-    var bnb = {lat: 51.921212, lng: -8.084154};
+    var bnb = {lat: 51.872086, lng: -7.967201 };
     var mapOptions = {
         zoom: 11,
-        center: church,
+        center: reception,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         panControl: false,
         zoomControl: true,
@@ -116,9 +116,9 @@ function initMap() {
         '</div>' +
         '<h3 id="firstHeading" class="firstHeading">Wedding Ceremony</h3>' +
         '<div id="bodyContent">' +
-        '</p><i class="fa fa-map-marker"></i><span class="mapdetail">The Holy Rosary Church, Midleton, Co. Cork, P25 WF65</span></p>' +
-        '<p><a href="http://midletonparish.ie/">' + '<i class="fa fa-globe"><span class="mapdetail">www.midletonparish.ie</span></i></a></p>' +
-        '<p><a href="tel:0214219000"><i class="fa fa-phone"><span class="mapdetail">(021) 421 9000</span></i></a></p>' +
+        '<p><i class="mapicon fa fa-map-marker"></i><span class="mapdetail">The Holy Rosary Church, Midleton, Co. Cork, P25 WF65</span></p>' +
+        '<p><a href="http://midletonparish.ie/" target=_blank>' + '<i class="mapicon fa fa-globe"><span class="mapdetail">www.midletonparish.ie</span></i></a></p>' +
+        '<p><a href="tel:0214219000"><i class="mapicon fa fa-phone"><span class="mapdetail">(021) 421 9000</span></i></a></p>' +
         '</div>' +
         '</div>';
 
@@ -133,6 +133,8 @@ function initMap() {
     });
     churchmarker.addListener('click', function () {
         churchinfowindow.open(map, churchmarker);
+        receptioninfowindow.close(map, receptionmarker);
+        bnbinfowindow.close(map, bnbmarker);
     });
 
     //Reception marker and pop up box
@@ -141,9 +143,9 @@ function initMap() {
         '</div>' +
         '<h3 id="firstHeading" class="firstHeading">Wedding Reception & Hotel Accommodation</h3>' +
         '<div id="bodyContent">' +
-        '<p><i class="fa fa-map-marker"></i><span class="mapdetail">Castlemartyr Resort, Castlemartyr, Co. Cork, P25 X300</span></p>' +
-        '<p><a href="http://midletonparish.ie/">' + '<i class="fa fa-globe"><span class="mapdetail">www.castlemartyrresort.ie</span></i></a></p>' +
-        '<p><a href="tel:0214636508"><i class="fa fa-phone"><span class="mapdetail">(021) 463 6508</span></i></a></p>' +
+        '<p><i class="mapicon fa fa-map-marker"></i><span class="mapdetail">Castlemartyr Resort, Castlemartyr, Co. Cork, P25 X300</span></p>' +
+        '<p><a href="www.castlemartyrresort.ie/" target=_blank>' + '<i class="mapicon fa fa-globe"><span class="mapdetail">www.castlemartyrresort.ie</span></i></a></p>' +
+        '<p><a href="tel:0214636508"><i class="mapicon fa fa-phone"><span class="mapdetail">(021) 463 6508</span></i></a></p>' +
         '</div>' +
         '</div>';
 
@@ -158,6 +160,8 @@ function initMap() {
     });
     receptionmarker.addListener('click', function () {
         receptioninfowindow.open(map, receptionmarker);
+        churchinfowindow.close(map, churchmarker);
+        bnbinfowindow.close(map, bnbmarker);
     });
 
     //BnB marker and pop up box
@@ -166,9 +170,9 @@ function initMap() {
         '</div>' +
         '<h3 id="firstHeading" class="firstHeading">B&B Accommodation</h3>' +
         '<div id="bodyContent">' +
-        '<p><i class="fa fa-map-marker"></i><span class="mapdetail">Sundown House B&B, Kilmountain, Co. Cork, P25 H283</span></p>' +
-        '<p><a href="http://www.sundownhousebb.com/">' + '<i class="fa fa-globe"><span class="mapdetail">www.sundownhousebb.com</span></i></a></p>' +
-        '<p><a href="tel:0214667375"><i class="fa fa-phone"><span class="mapdetail">(021) 466 7375</span></i></a></p>' +
+        '<p><i class="mapicon fa fa-map-marker"></i><span class="mapdetail">Castle Farm B&B, Ballycrenane, Co. Cork, P25 ET65</span></p>' +
+        '<p><a href="www.castlefarmbb.com" target=_blank>' + '<i class="mapicon fa fa-globe"><span class="mapdetail">www.castlefarmbb.com</span></i></a></p>' +
+        '<p><a href="tel:02498165"><i class="mapicon fa fa-phone"><span class="mapdetail">(024) 98165</span></i></a></p>' +
         '</div>' +
         '</div>';
     var bnbinfowindow = new google.maps.InfoWindow({
@@ -181,6 +185,8 @@ function initMap() {
     });
     bnbmarker.addListener('click', function () {
         bnbinfowindow.open(map, bnbmarker);
+        churchinfowindow.close(map, churchmarker);
+        receptioninfowindow.close(map, receptionmarker);
     });
 
 }
