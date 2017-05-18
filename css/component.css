@@ -92,7 +92,7 @@
 .photostack nav {
 	position: absolute;
 	width: 100%;
-	bottom: 30px;
+	bottom: 80px;
 	z-index: 90;
 	text-align: center;
 	left: 0;
@@ -127,12 +127,12 @@
 .photostack nav span::after {
 	content: "\e600";
 	font-family: 'icons';
-	font-size: 80%;
+	font-size: 100%;
 	speak: none;
 	display: inline-block;
 	vertical-align: top;
 	font-style: normal;
-	font-weight: normal;
+	font-weight: bold;
 	font-variant: normal;
 	text-transform: none;
 	line-height: 30px;
@@ -153,9 +153,9 @@
 }
 
 .photostack nav span.current.flip {
-	-webkit-transform: scale(1) rotateY(-180deg) translateZ(-1px);
-	transform: scale(1) rotateY(-180deg) translateZ(-1px);
-	background: #555;
+    -webkit-transform: scale(1) rotateY(-180deg) translateZ(-1px);
+    transform: scale(1) rotateY(-180deg) translateZ(-1px);
+    background: #555;
 }
 
 .photostack nav span.flippable::after {
@@ -301,8 +301,8 @@ figure.photostack-current::after {
 /* Some custom styles for the demo */
 
 /* Since we don't have back sides for the first photo stack, we don't want the current dot to become too big */
-#photostack-1 nav span.current {
-	background: #888;
-	-webkit-transform: scale(0.61);
-	transform: scale(0.61);
-}
+/*#photostack-1 nav span.current {*/
+	/*background: #888;*/
+	/*-webkit-transform: scale(0.61);*/
+	/*transform: scale(0.61);*/
+/*}*/

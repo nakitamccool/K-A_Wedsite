@@ -82,6 +82,13 @@ header {
     img.img-circle{
         display: none;
     }
+    h2#repondezsilvousplait{
+        display: none;
+    }
+    /* Allows you to scroll past map on mobile */
+    div#map{
+        width: 100%;
+    }
 
 }
 
@@ -164,6 +171,11 @@ div.sectiontitle {
 
 .calltoaction {
     margin: 3px;
+    background-color:#F4C4C0;
+}
+
+.calltoaction:hover, .calltoaction:active{
+    background-color: #E39B9C;
 }
 
 .header-content-inner {
@@ -436,3 +448,12 @@ section#stayingthere{
     padding-top: 30px;
 }
 /*End of staying there*/
+
+#repondezsilvousplait{
+    text-shadow: 0 0 20px black;
+}
+
+.title {
+    color: white;
+    text-shadow: 0 0 20px #333;
+}

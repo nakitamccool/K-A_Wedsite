@@ -11,6 +11,12 @@ function initMap() {
         zoom: 11,
         center: reception,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
+        /*
+       * gesture handling mode set to 'cooperative',
+       * which means that on a mobile device, the user must swipe with one
+       * finger to scroll the page and two fingers to pan the map.
+       */
+        gestureHandling: 'cooperative',
         panControl: false,
         zoomControl: true,
         zoomControlOptions: {
@@ -144,7 +150,7 @@ function initMap() {
         '<h3 id="firstHeading" class="firstHeading">Wedding Reception & Hotel Accommodation</h3>' +
         '<div id="bodyContent">' +
         '<p><i class="mapicon fa fa-map-marker"></i><span class="mapdetail">Castlemartyr Resort, Castlemartyr, Co. Cork, P25 X300</span></p>' +
-        '<p><a href="www.castlemartyrresort.ie/" target=_blank>' + '<i class="mapicon fa fa-globe"><span class="mapdetail">www.castlemartyrresort.ie</span></i></a></p>' +
+        '<p><a href="http://www.castlemartyrresort.ie" target=_blank>' + '<i class="mapicon fa fa-globe"><span class="mapdetail">www.castlemartyrresort.ie</span></i></a></p>' +
         '<p><a href="tel:0214636508"><i class="mapicon fa fa-phone"><span class="mapdetail">(021) 463 6508</span></i></a></p>' +
         '</div>' +
         '</div>';
@@ -166,12 +172,12 @@ function initMap() {
 
     //BnB marker and pop up box
     var bnbPopUp = '<div id="content">' +
-        '<div id="siteNotice">' +
+        '<div id="siteNot ice">' +
         '</div>' +
         '<h3 id="firstHeading" class="firstHeading">B&B Accommodation</h3>' +
         '<div id="bodyContent">' +
         '<p><i class="mapicon fa fa-map-marker"></i><span class="mapdetail">Castle Farm B&B, Ballycrenane, Co. Cork, P25 ET65</span></p>' +
-        '<p><a href="www.castlefarmbb.com" target=_blank>' + '<i class="mapicon fa fa-globe"><span class="mapdetail">www.castlefarmbb.com</span></i></a></p>' +
+        '<p><a href="http://www.castlefarmbb.com" target=_blank>' + '<i class="mapicon fa fa-globe"><span class="mapdetail">www.castlefarmbb.com</span></i></a></p>' +
         '<p><a href="tel:02498165"><i class="mapicon fa fa-phone"><span class="mapdetail">(024) 98165</span></i></a></p>' +
         '</div>' +
         '</div>';
@@ -181,7 +187,8 @@ function initMap() {
     var bnbmarker = new google.maps.Marker({
         position: bnb,
         title: 'BnB accommodation',
-        map: map
+        map: map,
+        icon: "img/mapmarkers/bnb.png"
     });
     bnbmarker.addListener('click', function () {
         bnbinfowindow.open(map, bnbmarker);
